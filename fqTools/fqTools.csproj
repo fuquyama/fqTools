@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+	<VersionPrefix>1.0.1</VersionPrefix>
     <Authors>fuquyama</Authors>
     <Copyright>Copyright © 2022 fuquyama</Copyright>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
