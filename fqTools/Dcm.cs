@@ -380,8 +380,8 @@ namespace fqTools
         /// <param name="dcm">DCM</param>
         /// <returns>指定順番でのオイラー角 (radians)
         /// <para>ex)</para>
-        /// <para>R321 returns [Roll Pitch Yaw]</para>
-        /// <para>R123 returns [Yaw Pich Roll]</para>
+        /// <para>R321 returns { Yaw Pitch Roll }</para>
+        /// <para>R123 returns { Roll Pitch Yaw }</para>
         /// </returns>
         public static double[] ToEuler(Euler euler, Dcm dcm)
         {
