@@ -186,5 +186,15 @@ namespace fqTools.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void GetBooleansTest()
+        {
+            bool[] expected = new bool[] { true, false, true, false, false, true, false, true };
+            byte value = 0xA5;
+            bool[] actual = BitConverter.GetBooleans(value);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }

@@ -8,6 +8,24 @@ namespace fqTools
 {
     public static class BitConverter
     {
+        /// <summary>
+        /// Returns the specified byte value as an array of booleans.
+        /// </summary>
+        /// <param name="value">The number to convert.</param>
+        /// <returns>An array of boolieans with length 8.</returns>
+        public static bool[] GetBooleans(byte value)
+        {
+            bool[] ba = new bool[8];
+
+            for (int i = 0; i < 8; i++)
+            {
+                ba[i] = (value & (1 << i)) > 0;
+            }
+
+            return ba;
+        }
+
+
         /// <inheritdoc cref="System.BitConverter.GetBytes(short)"/>
         /// <param name="bigEndian">BigEndianの並びにする</param>
         public static byte[] GetBytes(short value, bool bigEndian = true)
