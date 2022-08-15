@@ -295,7 +295,7 @@ namespace fqTools
             }
 
             //特異点評価
-            if (Math.Abs(dcm[k, i]) < float.MinValue)
+            if (Math.Abs(dcm[k, i]) < float.Epsilon)
             {
                 return angles;
             }
@@ -358,7 +358,7 @@ namespace fqTools
             }
 
             //特異点評価
-            if (Math.Abs(dcm[i, i]) > 1 - float.MinValue)
+            if (Math.Abs(dcm[i, i]) < float.Epsilon)
             {
                 return angles;
             }
